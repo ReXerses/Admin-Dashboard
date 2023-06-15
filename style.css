@@ -15,36 +15,50 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: minmax(200px,1fr) minmax(900px,3fr) 40px;
-    height: 100vh;
-    overflow-y: scroll;
+    grid-template-rows: 260px minmax(900px,3fr) 40px;
+    height: 100%;
+
+}
+
+ul > li {
+    list-style: none;
+    font-size: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    background-color: #d7d293;
+    background-image: url(https://www.transparenttextures.com/patterns/tileable-wood-colored.png);
+    transform: skew(-10deg, 0deg);
+    border-radius: 16px;
+    padding: 10px;
 }
 
 .dashboard {
     grid-column: 1/2;
     grid-row: 1/4;
     background-color: #f3da62;
-    background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
+    background-image: url(https://www.transparenttextures.com/patterns/rocky-wall.png);
     border: 1px solid black;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(100px, 2fr) repeat(6, minmax(30px , 1fr)) 1fr repeat(3, minmax(30px , 1fr));
-    padding: 20px;
-    row-gap: 20px;
+    padding: 25px;
+    row-gap: 40px;
+    grid-auto-rows: min-content;
 }
 
 .navbar {
     grid-column: 2/3;
     grid-row: 1 /2;
     background-color: #d7f309;
-    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    background-image: url(https://www.transparenttextures.com/patterns/black-linen.png);
     border: 1px solid black;
     position: sticky;
     top: 0;
     display: grid;
     grid-template-rows: minmax(60px,1fr) minmax(60px,1fr);
     gap: 25px;
-    padding: 28px;
+    padding: 25px;
 }
 
 .dashboard > .logo {
@@ -57,12 +71,12 @@ body {
     justify-items: center;
 }
 
-.logo > div{
+.logo > img{
     grid-column: 1/2;
-    background-image: url(./media/logo.png);
-    background-size: 100% 100%;
-    min-height: 100%;
-    min-width: 100%;
+    
+    max-width: 100px;
+    max-height: 100px;
+    
 }
 
 
@@ -76,8 +90,7 @@ h1 {
 
 .icone_dash {
     min-height: 30px;
-    max-height: 83%;
-    grid-column: 1/2;
+    max-height: 50px;
     justify-self: center;
     align-self: center;
     padding-left: 10px;
@@ -85,35 +98,31 @@ h1 {
 
 .nome_dash {
     font-family: king-arthur;
-    font-size: clamp(35px, 2.0vw ,3.0rem);
+    font-size: clamp(37px, 2.0vw ,3.0rem);
     text-decoration: none;
     color: black;
-    grid-column: 2/3;
     align-self: center;
     letter-spacing: 0.1rem;
 }
 
-.riga_dashboard {
+.prima-lista , .seconda-lista {
     display: grid;
-    grid-template-columns: minmax(80px, 0.7fr) 2fr;
-    background-color: #d7d293;
-    background-image: url("https://www.transparenttextures.com/patterns/tileable-wood-colored.png");
-    transform: skew(-10deg, 0deg);
-    border-radius: 16px;
-    gap: 0.8rem;
+    padding-left: 10px;
+    gap: 1.4rem;
 }
+
 .avatar {
-    min-height: 55px;
+    height: 55px;
     max-height: 100%;
-    border-radius: 32px;
-    background-color: #b9ffff;
+    border-radius: 64px;
     justify-self: center;
+    border: 5px dotted #fffefe;
 }
 
 .barra-ricerca {
     display: grid;
     grid-row: 1/2;
-    grid-template-columns: 50px 3fr 1fr 50px 80px 1fr;
+    grid-template-columns: 50px 4fr 1fr 50px 80px 1fr;
     column-gap: 30px;
     align-items: center;
 }
@@ -126,7 +135,7 @@ h1 {
     cursor: pointer;
     grid-column: 1/2;
     height: 40px;
-    width: 100%;
+    width: 40px;
     padding: 0px;
 }
 
@@ -150,6 +159,7 @@ h1 {
     background-color: #ffffff00;
     cursor: pointer;
     height: 50px;
+    width: 50px;
     padding: 0px;
 }
 
@@ -163,13 +173,13 @@ h1 {
 .barra-interagisci {
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 3fr 1fr 1fr 1fr;
     align-items: center;
     column-gap: 1.4rem;
 }
 
 .barra-interagisci > .avatar {
-    height: 120%;
+    height: 80px;
 }
 
 .saluto > p {
@@ -200,8 +210,8 @@ h1 {
 .progetti{
     grid-column: 1/2;
     display: grid;
-    grid-template-rows: minmax(100px, 1fr) 6fr;
-    padding: 20px;
+    grid-template-rows: 100px 1fr;
+    padding: 25px;
     border: 1px solid;
 }
 
@@ -215,24 +225,46 @@ h1 {
 
 .articoli {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .card {
-    background-color: silver;
+    background-color: #fffce9;
+    background-image: url(https://www.transparenttextures.com/patterns/cardboard.png);
     padding: 20px;
+    border-radius: 16px;
+    border-left: 10px solid #339b38;
     display: grid;
 }
 
-.card > p {
-    margin :0px;
+.descrizione  {
+    margin: 0px;
+    font-family: 'enchanted-land';
+    grid-column: 1/2;
+    font-size: 1.4rem;
 }
+
+.icone {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.icone > img {
+    height: 25px;
+}
+
 
 .title {
     font-family: enchanted-land, sans-serif;
     font-size: 2rem;
     letter-spacing: 5px;
+    grid-column: 1/2;
+    margin: 0px;
 }
 
 .annunci {
