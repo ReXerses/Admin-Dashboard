@@ -261,7 +261,7 @@ h1 {
 
 .title {
     font-family: enchanted-land, sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 5px;
     grid-column: 1/2;
     margin: 0px;
@@ -269,8 +269,10 @@ h1 {
 
 .annunci {
     grid-column: 2/3;
-    grid-template-rows: minmax(100px, 1fr) 2fr minmax(100px, 1fr) 2fr;
-    padding: 20px;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px 1fr;
+    padding: 25px;
+    gap: 10px;
 }
 
 .annunci > p {
@@ -279,6 +281,35 @@ h1 {
     font-weight: bold;
     letter-spacing: 5px;
     margin: 0;
+}
+
+.notizie {
+    display: grid;
+    grid-auto-flow: row;
+    background-color: #fffce9;
+    background-image: url(https://www.transparenttextures.com/patterns/cardboard.png);
+    padding: 20px;
+    border-radius: 16px;
+    row-gap: 15px;
+}
+
+.notizie > div:nth-child(2) {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.notizie > div {
+    padding: 5px;
+}
+
+.trends {
+    display: grid;
+    grid-auto-flow: row;
+    background-color: #fffce9;
+    background-image: url(https://www.transparenttextures.com/patterns/cardboard.png);
+    padding: 20px;
+    border-radius: 16px;
+    row-gap: 15px;
 }
 
 .footer {
