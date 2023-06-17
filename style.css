@@ -20,6 +20,14 @@ body {
 
 }
 
+button:active {
+    transform: scale(1.05);
+}
+
+li:active {
+    transform: scale(1.05);
+}
+
 ul > li {
     list-style: none;
     font-size: 20px;
@@ -254,6 +262,10 @@ h1 {
 .icone > img {
     height: 25px;
     cursor: pointer;
+}
+
+.icone > img:active {
+    transform: scale(1.1);
 }
 
 
